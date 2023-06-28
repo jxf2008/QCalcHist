@@ -24,10 +24,6 @@ private:
 
 	QLineEdit* lineedit_imgpath;
 
-	QCheckBox* checkbox_channel_1;
-	QCheckBox* checkbox_channel_2;
-	QCheckBox* checkbox_channel_3;
-
 	QLabel* label_channels;
 	QLabel* label_channel_1_bin;
 	QLabel* label_channel_2_bin;
