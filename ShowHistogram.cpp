@@ -65,6 +65,7 @@ void ShowHistogram::set_img(const cv::Mat& mat) {
         radiobutton_channel_2->show();
         radiobutton_channel_3->show();
     }
+    radiobutton_channel_1->setChecked(true);
 }
 
 void ShowHistogram::calc_hist(const float** range, const int* bins, const int* channels, int channel_count) {
@@ -78,7 +79,6 @@ void ShowHistogram::calc_hist(const float** range, const int* bins, const int* c
 
         hist_bins.push_back(*(bins + i));
     }
-
     draw_hist_channel1();
 }
 
@@ -106,10 +106,10 @@ void ShowHistogram::draw_hist_channel1() {
         QString nm = QString::number(i + 1);
         categories << nm;
     }
-    series->clear();
-    series->append(set0);
     axisX->clear();
     axisX->append(categories);
+    series->clear();
+    series->append(set0);
 
     axisY->setRange(0, 100);
 }
